@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medifiles - Registro</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="register-container">
+        <img src="img/logomedifiles.png" alt="Medifiles Logo" class="logo">
+        <h1>Crear Cuenta</h1>
+        <form id="registerForm" action="/api/register" method="POST">
+            <label for="role">Soy:</label>
+            <select id="tipo_usuario" name="tipo_usuario" required>
+                <option value="enfermera">Enfermera</option>
+                <option value="personalHistorias">Personal de Historias Médicas</option>
+                <option value="medico">Médico</option>
+            </select>
+            <div id="commonFields">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" name="cedula" required>
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="numero_telefono" name="numero_telefono" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" required>
+                <label for="confirmarContraseña">Confirmar Contraseña:</label>
+                <input type="password" id="confirmarContraseña" name="confirmarContraseña" required>
+            </div>
+            <div id="medicoFields" style="display: none;">
+                <label for="colegioMedico">Número de Colegio Médico:</label>
+                <input type="text" id="numero_colegio_medico" name="numero_colegio_medico">
+            </div>
+            <button type="submit">Crear Cuenta</button>
+        </form>
+    </div>
+    <script src="mainregister.js"></script>
+</body>
+</html>
+

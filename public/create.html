@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medifiles - Crear Historia Clínica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <button id="menuBtn">&#9776; Menu</button>
+        <div id="menu" class="menu">
+            <button onclick="window.location.href='main.html'">Principal</button>
+            <button onclick="window.location.href='search.html'">Buscar</button>
+            <button onclick="window.location.href='create.html'">Crear</button>
+            <button onclick="window.location.href='queue.html'">Cola</button>
+            <button onclick="window.location.href='report.html'">Reporte</button>
+            <button onclick="window.location.href='closure.html'">Cierre</button>
+            <button id="logoutBtn">Salir</button>
+            <button id="profileBtn">&#128100; Perfil</button>
+        </div>
+    </div>
+    <div class="content">
+        <div class="center-content">
+            <h1>Crear Historia Clínica</h1>
+            <form id="createForm">
+                <h2>Identificación</h2>
+                <label for="nombre">Nombre y Apellido:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required>
+                
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo" required>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                </select>
+                
+                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                
+                <label for="nombre_madre">Nombre de la madre:</label>
+                <input type="text" id="nombre_madre" name="nombre_madre" required>
+                
+                <label for="nombre_padre">Nombre del padre:</label>
+                <input type="text" id="nombre_padre" name="nombre_padre" required>
+                
+                <label for="edad_madre">Edad de la madre:</label>
+                <input type="number" id="edad_madre" name="edad_madre" required>
+                
+                <label for="edad_padre">Edad del padre:</label>
+                <input type="number" id="edad_padre" name="edad_padre" required>
+                
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                
+                <label for="motivo_consulta">Motivo de la consulta:</label>
+                <input type="text" id="motivo_consulta" name="motivo_consulta" required>
+                
+                <label for="enfermedad_actual">Enfermedad actual:</label>
+                <input type="text" id="enfermedad_actual" name="enfermedad_actual" required>
+                
+                <h2>Antecedentes Personales</h2>
+                <label for="embarazo_controlado">Embarazo controlado:</label>
+                <select id="embarazo_controlado" name="embarazo_controlado" required>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                
+                <label for="peso_nacer">Peso al nacer:</label>
+                <input type="number" id="peso_nacer" name="peso_nacer" required>
+                
+                <label for="talla_nacer">Talla al nacer:</label>
+                <input type="number" id="talla_nacer" name="talla_nacer" required>
+                
+                <label for="tipo_parto">Tipo de parto:</label>
+                <select id="tipo_parto" name="tipo_parto" required>
+                    <option value="pes">PES</option>
+                    <option value="parto_distocico">Parto distócico</option>
+                    <option value="cesarea_segmentaria">Cesárea segmentaria</option>
+                </select>
+                
+                <label for="respiro_lloro">Respiró y lloró al nacer:</label>
+                <select id="respiro_lloro" name="respiro_lloro" required>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                
+                <label for="hospitalizado">Hospitalizado:</label>
+                <select id="hospitalizado" name="hospitalizado" required>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                
+                <h2>Alimentación</h2>
+                <label><input type="checkbox" name="alimentacion" value="lactancia_materna"> Lactancia materna</label>
+                <label><input type="checkbox" name="alimentacion" value="formula_complementaria"> Fórmula complementaria</label>
+                
+                <label for="alimentacion_actual">Alimentación actual:</label>
+                <input type="text" id="alimentacion_actual" name="alimentacion_actual" required>
+                
+                <label for="gateo">Gateo a los:</label>
+                <input type="number" id="gateo" name="gateo" required>
+                
+                <label for="se_paro">Se paró a los:</label>
+                <input type="number" id="se_paro" name="se_paro" required>
+                
+                <label for="primeros_pasos">Dio sus primeros pasos a los:</label>
+                <input type="number" id="primeros_pasos" name="primeros_pasos" required>
+                
+                <label for="se_volteo">Se volteó a los:</label>
+                <input type="number" id="se_volteo" name="se_volteo" required>
+                
+                <label for="primer_diente">Salió su primer diente a los:</label>
+                <input type="number" id="primer_diente" name="primer_diente" required>
+                
+                <h2>Vacunación</h2>
+                <label><input type="checkbox" name="vacunacion" value="bcg_recién_nacido"> BCG recién nacido</label>
+                <label><input type="checkbox" name="vacunacion" value="hepatitis_recién_nacido"> Hepatitis recién nacido</label>
+                
+                <label for="otras_vacunas">Otras vacunas:</label>
+                <input type="text" id="otras_vacunas" name="otras_vacunas">
+                
+                <h2>Menarquia</h2>
+                <label for="menarquia">Años:</label>
+                <input type="number" id="menarquia" name="menarquia">
+                
+                <label><input type="checkbox" name="menarquia" value="eumenorreica"> Eumenorreica</label>
+                <label><input type="checkbox" name="menarquia" value="dismenorreica"> Dismenorreica</label>
+                
+                <h2>Antecedentes Médicos</h2>
+                <label for="hospitalizaciones">Hospitalizaciones:</label>
+                <select id="hospitalizaciones" name="hospitalizaciones" required>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                
+                <label for="asma">Asma:</label>
+                <select id="asma" name="asma" required>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                
+                <label for="diabetes">Diabetes:</label>
+                <select id="diabetes" name="diabetes" required>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                
+                <h2>Antecedentes Familiares</h2>
+                <label><input type="checkbox" name="antecedentes_familiares" value="diabetes"> Diabetes</label>
+                <label><input type="checkbox" name="antecedentes_familiares" value="hta"> HTA</label>
+                <label><input type="checkbox" name="antecedentes_familiares" value="cancer"> Cáncer</label>
+                <label><input type="checkbox" name="antecedentes_familiares" value="asma"> Asma</label>
+                <label><input type="checkbox" name="antecedentes_familiares" value="alergias"> Alergias</label>
+                <label for="otros">Otros:</label>
+                <input type="text" id="otros" name="otros">
+                
+                <h2>Examen Físico</h2>
+                <label for="peso">Peso:</label>
+                <input type="number" id="peso" name="peso" required>
+                
+                <label for="talla">Talla:</label>
+                <input type="number" id="talla" name="talla" required>
+                
+                <label for="cc">CC:</label>
+                <input type="text" id="cc" name="cc" required>
+                
+                <label for="temperatura">Temperatura:</label>
+                <input type="number" id="temperatura" name="temperatura" required>
+                
+                <label for="fc">FC:</label>
+                <input type="number" id="fc" name="fc" required>
+                
+                <label for="fr">FR:</label>
+                <input type="number" id="fr" name="fr" required>
+                
+                <label for="piel">Piel:</label>
+                <input type="text" id="piel" name="piel" required>
+                
+                <label for="cabeza_cuello">Cabeza y cuello:</label>
+                <input type="text" id="cabeza_cuello" name="cabeza_cuello" required>
+                
+                <label for="cardiopulmonar">Cardiopulmonar:</label>
+                <input type="text" id="cardiopulmonar" name="cardiopulmonar" required>
+                
+                <label for="abdomen">Abdomen:</label>
+                <input type="text" id="abdomen" name="abdomen" required>
+                
+                <label for="extremidades">Extremidades:</label>
+                <input type="text" id="extremidades" name="extremidades" required>
+                
+                <label for="genitales">Genitales:</label>
+                <input type="text" id="genitales" name="genitales" required>
+                
+                <label for="recto">Recto:</label>
+                <input type="text" id="recto" name="recto" required>
+                
+                <label for="neurologico">Neurológico:</label>
+                <input type="text" id="neurologico" name="neurologico" required>
+                
+                <h2>Diagnóstico</h2>
+                <label for="diagnostico">Diagnóstico:</label>
+                <input type="text" id="diagnostico" name="diagnostico" required>
+                
+                <h2>Tratamiento</h2>
+                <label for="tratamiento">Tratamiento:</label>
+                <input type="text" id="tratamiento" name="tratamiento" required>
+                
+                <h2>Próxima Cita</h2>
+                <label for="proxima_cita">Próxima Cita:</label>
+                <input type="date" id="proxima_cita" name="proxima_cita" required>
+                
+                <button type="submit">Guardar y Añadir a la Cola</button>
+                <button type="button" id="guardarBtn">Guardar</button>
+                <button type="button" id="referirBtn">Referir</button>
+                <button type="button" id="imprimirBtn">Imprimir</button>
+            </form>
+        </div>
+    </div>
+    <div id="referenciaModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Referencia</h2>
+            <p>Nombre y Apellido: <span id="refNombre"></span></p>
+            <p>Sexo: <span id="refSexo"></span></p>
+            <p>Edad: <span id="refEdad"></span></p>
+            <p>Para: <input type="text" id="refPara" name="refPara" required></p>
+            <p>Explicación de la referencia:</p>
+            <textarea id="refExplicacion" name="refExplicacion" required></textarea>
+            <button id="imprimirReferenciaBtn">Imprimir Referencia</button>
+        </div>
+    </div>
+    <script src="maincreate.js"></script>
+</body>
+</html>

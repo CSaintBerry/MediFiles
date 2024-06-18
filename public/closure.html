@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medifiles - Cierre Diario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <button id="menuBtn">&#9776; Menu</button>
+        <div id="menu" class="menu" style="display:none;">
+            <button onclick="window.location.href='main.html'">Principal</button>
+            <button onclick="window.location.href='search.html'">Buscar</button>
+            <button onclick="window.location.href='create.html'">Crear</button>
+            <button onclick="window.location.href='queue.html'">Cola</button>
+            <button onclick="window.location.href='report.html'">Reporte</button>
+            <button onclick="window.location.href='closure.html'">Cierre</button>
+            <button id="logoutBtn">Salir</button>
+            <button id="profileBtn">&#128100; Perfil</button>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Cierre Diario</h1>
+        <button id="printBtn">Imprimir</button>
+        <div id="dailyClosure">
+            <!-- Cierre diario se mostrará aquí -->
+        </div>
+    </div>
+    <script src="mainclosure.js"></script>
+</body>
+</html>

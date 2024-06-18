@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medifiles - Cola de Pacientes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <button id="menuBtn">&#9776; Menu</button>
+        <div id="menu" class="menu" style="display:none;">
+            <button onclick="window.location.href='main.html'">Principal</button>
+            <button onclick="window.location.href='search.html'">Buscar</button>
+            <button onclick="window.location.href='create.html'">Crear</button>
+            <button onclick="window.location.href='queue.html'">Cola</button>
+            <button onclick="window.location.href='report.html'">Reporte</button>
+            <button onclick="window.location.href='closure.html'">Cierre</button>
+            <button id="logoutBtn">Salir</button>
+            <button id="profileBtn">&#128100; Perfil</button>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Cola de Pacientes</h1>
+        <div id="queueContainer">
+            <!-- Cola de pacientes se mostrará aquí -->
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
+

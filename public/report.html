@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medifiles - Reporte</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="sidebar">
+        <button id="menuBtn">&#9776; Menu</button>
+        <div id="menu" class="menu">
+            <button onclick="window.location.href='main.html'">Principal</button>
+            <button onclick="window.location.href='search.html'">Buscar</button>
+            <button onclick="window.location.href='create.html'">Crear</button>
+            <button onclick="window.location.href='queue.html'">Cola</button>
+            <button onclick="window.location.href='report.html'">Reporte</button>
+            <button onclick="window.location.href='closure.html'">Cierre</button>
+            <button id="logoutBtn">Salir</button>
+            <button id="profileBtn">&#128100; Perfil</button>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Reporte de Historias</h1>
+        <div class="filters">
+            <label for="edad">Edad:</label>
+            <select id="edad" name="edad">
+                <option value="">Seleccione</option>
+                <option value="0-11">0 a 11 meses</option>
+                <option value="1-5">1 a 5 años</option>
+                <option value="6-9">6 a 9 años</option>
+                <option value="10-12">10 a 12 años</option>
+            </select>
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo">
+                <option value="">Seleccione</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </select>
+            <label for="fechaDesde">Desde:</label>
+            <input type="date" id="fechaDesde" name="fechaDesde">
+            <label for="fechaHasta">Hasta:</label>
+            <input type="date" id="fechaHasta" name="fechaHasta">
+            <button id="generateReportBtn">Generar Reporte</button>
+        </div>
+        <div id="reportContainer">
+            <!-- Reporte se mostrará aquí -->
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
